@@ -12,4 +12,3 @@ Go through the modules from 1 to 11 one by one and complete the exercises.
 9. [Searches and regular expressions](09-Searches_regex.md)
 10. [Retrieving web content](10-Retrieving_web_content.md)
 11. [Exercises](11-Exercises.md)
-- [ ] Read background
