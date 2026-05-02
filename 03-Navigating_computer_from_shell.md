@@ -14,7 +14,7 @@ The first command you will learn, and one you’ll use frequently, is `ls` (shor
 
 For comparison, open Finder (Mac) or the Linux equivalent and navigate to your home folder (Mac: `Go` → `Home` or `Shift+⌘+H` keyboard shortcut), so you can see its content. Now do the same by typing the command ls in your terminal window and compare the output with what you see in the familiar `Finder`. You should see the same folders and files in both. If you have set your computer to a different language than English, you will see the translated names in the GUI, but not in the terminal.
 
-In the following examples, the bold characters are what you type, and the regular characters are what the system prints, and we may or may not show the prompt that begins each line. In place of `lucy` you’ll see your own username, and you will also see a different host name at the beginning of the line. This is your network identity, created when you first set up an account on your computer.
+In the following examples, in place of `lucy` you’ll see your own username, and you will also see a different host name at the beginning of the line. This is your network identity, created when you first set up an account on your computer.
 
 To see the contents of the `Desktop` folder while sitting in your home directory, type:
 
@@ -57,7 +57,7 @@ In the newest Windows version, the root directory of the terminal is shown in th
 
 </details>
 
-In the following examples, the bold characters are what you type, and the regular characters are what the system prints, and we may or may not show the prompt that begins each line. In place of `lucy` you’ll see your own username, and you will also see a different host name at the beginning of the line. This is your network identity, created when you first set up an account on your computer. 
+In the following examples, in place of `lucy` you’ll see your own username, and you will also see a different host name at the beginning of the line. This is your network identity, created when you first set up an account on your computer. 
 
 Type the command `ls` in your terminal window and you will see that there is not much to see in the Ubuntu or Cygwin home directory yet. We will copy the example files to here later on.
 
@@ -134,6 +134,7 @@ The same error happens when you try this, but for a different reason:
 
 ```bash
 host:Desktop lucy$ ls /Desktop
+
 ls: /Desktop: No such file or directory
 ```
 
@@ -266,7 +267,9 @@ First, go back to the `Desktop` folder and then go in one command to the `Downlo
 
 ```bash
 lucy@host:/mnt/c/Users/lucy$ cd Desktop
+
 lucy@host:/mnt/c/Users/lucy/Desktop$ cd ../Downloads
+
 lucy@host:/mnt/c/Users/lucy/Downloads$
 ```
 
