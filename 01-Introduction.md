@@ -1,4 +1,4 @@
-## 1. Introduction
+# 1. Introduction
 
 In this tutorial you will get familiar with a different way to interact with your computer: through the command line.
 
