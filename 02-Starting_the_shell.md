@@ -25,3 +25,5 @@ chsh -s /bin/bash
 ## 2.2. Ending your terminal session
 
 To end your session, type `exit`. You can just close the window, but this is a bit like unplugging your computer without turning it off first: if there are any programs still running in the terminal window, they will come unceremoniously to a halt. Closing the window is also not an option when you log in to a different computer from within your terminal.
+
+[Go to module 3](03-Navigating_computer_from_shell.md)
