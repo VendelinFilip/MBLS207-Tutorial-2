@@ -62,3 +62,5 @@ An alternative option is to install a virtual machine. You can follow these inst
 You can install Ubuntu 20.04 or 22.04
 
 </details>
+
+[Go to module 2](02-Starting_the_shell.md)
