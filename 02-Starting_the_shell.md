@@ -1,8 +1,4 @@
-
-
-## Page 3
-
-2. Starting the shell and getting oriented
+# 2. Starting the shell and getting oriented
 
 2.1. Starting your terminal session
 On Windows, launch the Ubuntu app, which will open the Ubuntu terminal. On Linux/Mac, open the Terminal app.
