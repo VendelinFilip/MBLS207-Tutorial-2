@@ -45,38 +45,35 @@ $ grep -v "Toolik Lake" ../examples/shaver_etal.csv
 ```
 This time the header is included in the output since it doesn’t contain `Toolik Lake`.
 
-### 9.3. Combining grep with the pipe |
+## 9.3. Combining grep with the pipe |
 
 In the previous example we specified a file to be examined. If you leave off the file name and only specify the regular expression, grep will take the input from another source; this other source will be the output of the pipe.
 
-It can sometimes be difficult to find a particular command in the hundreds of results that are displayed. One way to find the right one is if you can remember the argument values or other text you used in issuing that particular command. You can then use history to display your previous commands and use grep to find those lines that contain the text of interest. Of course, you could redirect the output of history to a file with >, and then run grep on the new file; however, that gets cumbersome and generates a file that you will only need once, cluttering up your system. It is much more convenient to use a pipe to send the output of history directly to grep:
+It can sometimes be difficult to find a particular command in the hundreds of results that are displayed. One way to find the right one is if you can remember the argument values or other text you used in issuing that particular command. You can then use `history` to display your previous commands and use grep to find those lines that contain the text of interest. Of course, you could redirect the output of history to a file with `>`, and then run `grep` on the new file; however, that gets cumbersome and generates a file that you will only need once, cluttering up your system. It is much more convenient to use a pipe to send the output of `history` directly to `grep`:
+
 ```bash
 $ history | grep Toolik
 ```
-This will display all the commands you have executed that contain the word Toolik. The output of the history command does not depend on what directory you are in.
 
-&lt;page_number&gt;28&lt;/page_number&gt;
+This will display all the commands you have executed that contain the word `Toolik`. The output of the history command does not depend on what directory you are in.
 
----
-
-
-## Page 29
-
-You can also use the pipe to construct searches by combining two consecutive grep operations. In the previous example regarding Toolik Lake, you created a regular expression that matched "Aug. *Toolik Lake". If you want to make one of these terms case-sensitive, but the other not, or if you want to invert one search and not the other, you can use the pipe. To do this, first run a grep command for lines containing Aug, and then instead of sending that output to the screen or a file, pipe to another grep command that looks for Toolik Lake. This would give you more flexibility in constructing each particular search:
+You can also use the pipe to construct searches by combining two consecutive `grep` operations. In the previous example regarding Toolik Lake, you created a regular expression that matched `"Aug. *Toolik Lake"`. If you want to make one of these terms case-sensitive, but the other not, or if you want to invert one search and not the other, you can use the pipe. To do this, first run a grep command for lines containing `Aug`, and then instead of sending that output to the screen or a file, pipe to another `grep` command that looks for `Toolik Lake`. This would give you more flexibility in constructing each particular search:
 
 ```bash
 $ grep Aug ../examples/shaver_etal.csv | grep "Toolik Lake" > toola2.csv
 ```
 
-Most but not all programs can accept data from a pipe in the way grep did above. It is not enough to just send the output of one program to another; the data must be organized in such a way that the receiving program can makes sense of them. Since grep can handle any text, this isn't an issue in these particular examples.
+Most but not all programs can accept data from a pipe in the way `grep` did above. It is not enough to just send the output of one program to another; the data must be organized in such a way that the receiving program can makes sense of them. Since `grep` can handle any text, this isn't an issue in these particular examples.
 
-### 9.4. Search across multiple files with grep
+## 9.4. Search across multiple files with grep
 
-To search the contents of multiple files in one step for a particular bit of text, you could use cat to join the contents of the files together and then feed them to grep with a pipe:
+To search the contents of multiple files in one step for a particular bit of text, you could use `cat` to join the contents of the files together and then feed them to `grep` with a pipe:
 
 ```bash
 $ cd ../examples
+
 $ cat *.seq | grep ">"
+
 >Fe_MM1_01A01
 >Fe_MM1_01A02
 >Fe_MM1_01A03
@@ -84,12 +81,13 @@ $ cat *.seq | grep ">"
 ...
 ```
 
-Notice that the > in the command is within quotes. This indicates that > is the character that is being searched for, not a redirect to send the results to a file. This general approach is very useful for summarizing or extracting data spread across multiple files, but disastrous results can occur if you forget the quote marks.
+Notice that the `>` in the command is within quotes. This indicates that `>` is the character that is being searched for, not a redirect to send the results to a file. This general approach is very useful for summarizing or extracting data spread across multiple files, but disastrous results can occur if you forget the quote marks.
 
-In some cases, you may want to see both the lines with the pattern and name of the file they were found in. This is the default behaviour for grep when you designate input files with wildcards:
+In some cases, you may want to see both the lines with the pattern and name of the file they were found in. This is the default behaviour for `grep` when you designate input files with wildcards:
 
 ```bash
 $ grep ">" *.seq
+
 FEC00001_1.seq:>Fe_MM1_01A01
 FEC00002_1.seq:>Fe_MM1_01A02
 FEC00003_1.seq:>Fe_MM1_01A03
@@ -99,22 +97,19 @@ FEC00004_1.seq:>Fe_MM1_01A04
 
 Now you get the filename and contents of every matching line, separated by a colon.
 
-If instead of listing all the FASTA headers you would just want to know how many FASTA headers exist (i.e. how many sequences), you can use the option -c. Try the two following lines and see how the output differs.
+If instead of listing all the FASTA headers you would just want to know how many FASTA headers exist (i.e. how many sequences), you can use the option `-c`. Try the two following lines and see how the output differs.
 
-&lt;page_number&gt;29&lt;/page_number&gt;
-
----
-
-
-## Page 30
-
+```bash
 $ cat *.seq | grep -c ">"
-$ grep -c ">" *.seq
 
-Finally, it is also possible to list just the names of files that contain a particular text pattern. If you specify the -l argument to grep, instead of listing each line that matches, it outputs the name of each file that contains a matching line:
+$ grep -c ">" *.seq
+```
+
+Finally, it is also possible to list just the names of files that contain a particular text pattern. If you specify the `-l` argument to `grep`, instead of listing each line that matches, it outputs the name of each file that contains a matching line:
 
 ```bash
 $ grep -l GAATTC *.seq
+
 FEC00002_1.seq
 FEC00004_1.seq
 FEC00005_1.seq
@@ -130,11 +125,11 @@ In conjunction with a redirect, the above command can generate a new file with t
 $ grep -l GAATTC *.seq > ../sandbox/has_EcoRI.txt
 ```
 
-### 9.5. Refining the behaviour of grep
+## 9.5. Refining the behaviour of grep
 
-There are a variety of other useful arguments that modify the behaviour of grep; you can explore these in the grep manual page with `man grep`. Many of these are also listed in the table in Appendix 3, and some are listed here (Table 2). One of the most helpful is the argument -c, which will cause grep to output the number of lines which contain the specified pattern rather than the lines themselves.
+There are a variety of other useful arguments that modify the behaviour of `grep`; you can explore these in the `grep` manual page with `man grep`. Many of these are also listed in the table in Appendix 3, and some are listed here (Table 2). One of the most helpful is the argument `-c`, which will cause grep to output the number of lines which contain the specified pattern rather than the lines themselves.
 
-When searching through a long file it can be helpful to see not only the lines that contain your pattern of interest, but also where the lines are in the file. By default, grep will output the lines in the order they are encountered, but -n adds further location information by prepending the line numbers to the output.
+When searching through a long file it can be helpful to see not only the lines that contain your pattern of interest, but also where the lines are in the file. By default, `grep` will output the lines in the order they are encountered, but `-n` adds further location information by prepending the line numbers to the output.
 
 These arguments can be used in combination with the others mentioned above (-i and -v). The -v option is important for some tasks. Instead of trying to figure out the regular expression to search for “lines that don’t contain >” (Hmm... "^[^>]*$"?), you can just run a grep command for ">" with the -v option. You also don’t have to think about how to make a grep search that matches lines with three different items – just chain together three independent searches with the pipe, and the final output will be a consensus.
 
