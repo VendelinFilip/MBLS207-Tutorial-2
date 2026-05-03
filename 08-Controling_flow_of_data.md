@@ -26,7 +26,7 @@ files.txt shelltips.txt
 $ less files.txt
 ```
 
-## 8.2. Displaying and joining files with cat
+## 8.2. Displaying and joining files with `cat`
 
 Another useful command is `cat`. It is very simple, taking a list of one or more file names separated by spaces and outputting the contents of these files to the screen. Instead of displaying the contents in a special viewer or editor, as `less` and `nano` do, `cat` dumps them right into the display without a break, in the same manner as the results of many other commands, such as `ls`. Though this may not seem very useful at first, there is a good chance `cat` will become one of your most frequently used commands.
 
