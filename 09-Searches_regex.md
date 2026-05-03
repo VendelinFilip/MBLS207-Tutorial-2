@@ -8,7 +8,7 @@ Open the file with `less` to get a sense of its overall layout. You can see that
 
 Open `Microsoft Excel` (or another spreadsheet program) and import the csv file. You'll probably find it easier now to read the content of the file and see what the rows and columns mean.
 
-## 9.2. Extracting particular rows from a file using grep
+## 9.2. Extracting particular rows from a file using `grep`
 
 What if you want a file that contains only those records from `shaver_etal.csv` which pertain to Toolik Lake? The command-line program `grep` is an easy-to-use tool that quickly extracts only those lines of a file that match a particular regular expression. This is the first time we will use the regular expression skills that you developed earlier – outside of the context of a GUI-based text editor such as atom. In this case, no wild cards or quantifiers are needed. The regular expression will be just the literal piece of text you are looking for, `Toolik Lake`:
 
@@ -65,7 +65,7 @@ $ grep Aug ../examples/shaver_etal.csv | grep "Toolik Lake" > toola2.csv
 
 Most but not all programs can accept data from a pipe in the way `grep` did above. It is not enough to just send the output of one program to another; the data must be organized in such a way that the receiving program can makes sense of them. Since `grep` can handle any text, this isn't an issue in these particular examples.
 
-## 9.4. Search across multiple files with grep
+## 9.4. Search across multiple files with `grep`
 
 To search the contents of multiple files in one step for a particular bit of text, you could use `cat` to join the contents of the files together and then feed them to `grep` with a pipe:
 
@@ -125,62 +125,49 @@ In conjunction with a redirect, the above command can generate a new file with t
 $ grep -l GAATTC *.seq > ../sandbox/has_EcoRI.txt
 ```
 
-## 9.5. Refining the behaviour of grep
+## 9.5. Refining the behaviour of `grep`
 
-There are a variety of other useful arguments that modify the behaviour of `grep`; you can explore these in the `grep` manual page with `man grep`. Many of these are also listed in the table in Appendix 3, and some are listed here (Table 2). One of the most helpful is the argument `-c`, which will cause grep to output the number of lines which contain the specified pattern rather than the lines themselves.
+There are a variety of other useful arguments that modify the behaviour of `grep`; you can explore these in the `grep` manual page with `man grep`. Many of these are also listed in the table in Appendix 3, and some are listed here (Table 2). One of the most helpful is the argument `-c`, which will cause `grep` to output the number of lines which contain the specified pattern rather than the lines themselves.
 
 When searching through a long file it can be helpful to see not only the lines that contain your pattern of interest, but also where the lines are in the file. By default, `grep` will output the lines in the order they are encountered, but `-n` adds further location information by prepending the line numbers to the output.
 
-These arguments can be used in combination with the others mentioned above (-i and -v). The -v option is important for some tasks. Instead of trying to figure out the regular expression to search for “lines that don’t contain >” (Hmm... "^[^>]*$"?), you can just run a grep command for ">" with the -v option. You also don’t have to think about how to make a grep search that matches lines with three different items – just chain together three independent searches with the pipe, and the final output will be a consensus.
+These arguments can be used in combination with the others mentioned above (`-i` and `-v`). The `-v` option is important for some tasks. Instead of trying to figure out the regular expression to search for “lines that don’t contain >” (Hmm... `"^[^>]*$"`?), you can just run a grep command for `">"` with the `-v` option. You also don’t have to think about how to make a grep search that matches lines with three different items – just chain together three independent searches with the pipe, and the final output will be a consensus.
 
 Table 2. Options that modify the behaviour of grep
 
 <table>
   <thead>
     <tr>
-      <th>Usage example: grep -ci text filename</th>
+      <th>Usage example: <code>grep -ci</code> <em>text filename</em></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong>-c</strong> Show only a count of the results in the file (i.e., the number of lines that match)</td>
+      <td><strong><code>-c</code></strong> Show only a count of the results in the file (i.e., the number of lines that match)</td>
     </tr>
     <tr>
-      <td><strong>-v</strong> Invert the search and show only lines that do not match</td>
+      <td><strong><code>-v</code></strong> Invert the search and show only lines that do <em>not</em> match</td>
     </tr>
     <tr>
-      <td><strong>-i</strong> Match without regard to case</td>
+      <td><strong><code>-i</code></strong> Match without regard to case</td>
+    </tr>
+    <tr>
+      <td><strong><code>-E</code></strong> Use regular expressions syntax (as described in Chapters 2 and 3) with the exception of wildcards; use [ ] to indicate character ranges, and enclose search terms in quotes. See Appendix 3.</td>
+    </tr>
+    <tr>
+      <td><strong><code>-l</code></strong> List only the file names containing matches</td>
+    </tr>
+    <tr>
+      <td><strong><code>-n</code></strong> Show the line numbers of the match</td>
+    </tr>
+    <tr>
+      <td><strong><code>-h</code></strong> Hide the filenames in the output</td>
     </tr>
   </tbody>
 </table>
 
----
-
-
-## Page 31
-
-<table>
-  <tr>
-    <td>-E</td>
-    <td>Use regular expressions syntax (as described in Chapters 2 and 3) with the exception of wildcards; use [ ] to indicate character ranges, and enclose search terms in quotes. See Appendix 3.</td>
-  </tr>
-  <tr>
-    <td>-l</td>
-    <td>List only the file names containing matches</td>
-  </tr>
-  <tr>
-    <td>-n</td>
-    <td>Show the line numbers of the match</td>
-  </tr>
-  <tr>
-    <td>-h</td>
-    <td>Hide the filenames in the output</td>
-  </tr>
-</table>
-
 **Warning**
-Be extremely careful if you are constructing a grep query that includes > as part of the search term. Be sure that it is within quotes, or else the shell will interpret it as a redirect and replace the contents of the file you wanted to search. When in doubt, use quotes. They are also necessary if the pattern (i.e., the query text) has wildcards or quantifiers.
 
-&lt;page_number&gt;31&lt;/page_number&gt;
+Be extremely careful if you are constructing a grep query that includes `>` as part of the search term. Be sure that it is within quotes, or else the shell will interpret it as a redirect and replace the contents of the file you wanted to search. When in doubt, use quotes. They are also necessary if the pattern (i.e., the query text) has wildcards or quantifiers.
 
----
+[Go to module 10](10-Retrieving_web_content.md)
