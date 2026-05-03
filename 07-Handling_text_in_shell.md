@@ -1,13 +1,14 @@
+# 7. Handling text in the shell
 
-## Page 22
+<details>
+<summary><strong>Windows</strong></summary>
 
-## 7. Handling text in the shell
-
-### Windows
 To play around with the example folders and files, the easiest way is having these files in your Ubuntu/Cygwin home directory as well. We can copy them to this directory. Assuming you are already in the Ubuntu/Cygwin home directory and the pcfb folder is in your Windows home directory, the command is:
+
 ```bash
 $ cp -iR /mnt/c/Users/lucy/pcfb .
 ```
+</details>
 
 ### Editing text files at the command line with nano
 It is sometimes convenient to create or modify a file right at the command line. Moreover, if you work on a remote machine, the only way to directly modify a file may be through a command-line editor.
