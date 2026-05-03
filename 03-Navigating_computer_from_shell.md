@@ -312,3 +312,5 @@ $ cd
 ```
 
 You should find that `cd` and `cd ~` do the same thing, i.e., they take you back to your home directory. Typing `cd` is a very quick way to get there.
+
+[Go to module 4](04-Basic_manipulation.md)
