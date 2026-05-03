@@ -43,5 +43,7 @@ $ nano shelltips.txt
 
 and close `nano` again.
 
+![](./images/mbls207_tutorial2_3.png "Figure 3. A view of the command-line text editor nano with the text you entered. Some of the available commands are displayed at the bottom of the window.")
+**Figure 3. A view of the command-line text editor** `nano` **with the text you entered.** Some of the available commands are displayed at the bottom of the window.
 
 [Go to module 8](08-Controling_flow_of_data.md)
