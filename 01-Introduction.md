@@ -11,14 +11,14 @@ Go through the text and follow the instructions. You are encouraged to work in s
 If you don’t have it yet, first create a folder called `MBLS207`.
 
 <details>
-<summary>Mac</summary>
+<summary><strong>Mac</strong></summary>
   
 If you are doing this with **Mac**, feel free to create it in your favourite computer location. We recommend doing this in a high-level folder (as opposed to deeply nested), such as in your Desktop.
 
 </details>
 
 <details>
-<summary>Windows</summary>
+<summary><strong>Windows</strong></summary>
   
 From Windows, if you are accessing through the Ubuntu app, you should be able to see your Linux filesystem at the bottom side of the left column within Explorer – click there and create the folder within your Linux home (`/home/<your-username>`).
 
@@ -33,21 +33,21 @@ Now, download from Blackboard the file called “example_files” and unzip it h
 Depending on your operating system you may have to make your computer ready to use the command line. Certain parts of the tutorial are different for different operating systems.
 
 <details>
-<summary>Linux</summary>
+<summary><strong>Linux</strong></summary>
   
 Your computer is also ready to go. The paths mentioned in the tutorial will be slightly different on your machine.
 
 </details>
 
 <details>
-<summary>MacOS</summary>
+<summary><strong>MacOS</strong></summary>
   
 Your computer is ready to go. Find the Terminal program and launch it. If you don’t have a link on your Desktop or Dock yet, we suggest creating one.
 
 </details>
 
 <details>
-<summary>Windows</summary>
+<summary><strong>Windows</strong></summary>
 
 You can install Ubuntu as an app inside of Windows. Go to the Windows store, search for Ubuntu 22.04 and install it. Try to open the app to see if it works (it shouldn't contain any errors).
 
