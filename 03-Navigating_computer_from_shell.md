@@ -10,7 +10,7 @@ The first command you will learn, and one you’ll use frequently, is `ls` (shor
 **Figure 2. A portion of the Unix filesystem structure in tree format.** Folders (also called directories) are in green, files (also called documents) are in maroon, and Unix programs (also called commands) are in grey. The root directory is on the far left.
 
 <details>
-<summary>MacOS and Linux</summary>
+<summary><strong>MacOS and Linux</strong></summary>
 
 For comparison, open Finder (Mac) or the Linux equivalent and navigate to your home folder (Mac: `Go` → `Home` or `Shift+⌘+H` keyboard shortcut), so you can see its content. Now do the same by typing the command ls in your terminal window and compare the output with what you see in the familiar `Finder`. You should see the same folders and files in both. If you have set your computer to a different language than English, you will see the translated names in the GUI, but not in the terminal.
 
@@ -41,17 +41,17 @@ host:~ lucy$ pwd
 </details>
 
 <details>
-<summary>Windows</summary>
+<summary><strong>Windows</strong></summary>
 
 <details>
-<summary>Windows 10</summary>
+<summary><strong>Windows 10</strong></summary>
 
 If you are using WSL or Cygwin, the root directory in the terminal is in a somewhat odd place compared with the filesystem. The root directory corresponds to a Windows directory deeply hidden somewhere in `C:\Users\<username>\AppData\...` for WSL and `C:\cygwin` for Cygwin. Conversely, the Windows root directory `C:\` is available from the shell environment as `/mnt/c` (WSL) or `/cygdrive/c` (Cygwin).
 
 </details>
 
 <details>
-<summary>Windows 11</summary>
+<summary><strong>Windows 11</strong></summary>
   
 In the newest Windows version, the root directory of the terminal is shown in the filesystem (File Explorer) as a separate folder (Linux).
 
@@ -102,7 +102,7 @@ $ ls /cygdrive/c/Users/lucy/Documents
 ## 3.2. How to move around with `cd`
 
 <details>
-<summary>MacOS and Linux</summary>
+<summary><strong>MacOS and Linux</strong></summary>
   
 To move to another directory, use the command `cd` (change directory). Move inside your Desktop directory by typing
 
@@ -182,7 +182,7 @@ host:/ lucy$ pwd
 </details>
 
 <details>
-<summary>Windows</summary>
+<summary><strong>Windows</strong></summary>
   
 To move to another directory, use the command `cd` (change directory). Move inside your Windows home directory by typing:
 
