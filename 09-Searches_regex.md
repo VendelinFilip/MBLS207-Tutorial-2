@@ -152,7 +152,7 @@ Table 2. Options that modify the behaviour of grep
       <td><strong><code>-i</code></strong> Match without regard to case</td>
     </tr>
     <tr>
-      <td><strong><code>-E</code></strong> Use regular expressions syntax (as described in Chapters 2 and 3) with the exception of wildcards; use [ ] to indicate character ranges, and enclose search terms in quotes. See Appendix 3.</td>
+      <td><strong><code>-E</code></strong> Use regular expressions syntax (as described in Chapters 2 and 3) with the exception of wildcards; use <code>[ ]</code> to indicate character ranges, and enclose search terms in quotes. See Appendix 3.</td>
     </tr>
     <tr>
       <td><strong><code>-l</code></strong> List only the file names containing matches</td>
