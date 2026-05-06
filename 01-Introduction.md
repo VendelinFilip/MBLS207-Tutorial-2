@@ -26,7 +26,7 @@ From Windows, if you are accessing through the Ubuntu app, you should be able to
 
 Within `MBLS207`, create a folder called `Tutorial2`.
 
-Now, click [HERE](example_files_2), download file called “pcfb_examples” by clicking the download icon on the right and unzip it. From now on, before opening an example file, copy that file to the `sandbox` folder.
+Now, click [HERE](pcfb_examples.zip), download file called “pcfb_examples” by clicking the download icon on the right and unzip it. From now on, before opening an example file, copy that file to the `sandbox` folder.
 
 **Accessing and setting up the terminal**
 
