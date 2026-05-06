@@ -2,7 +2,7 @@
 
 ## 11.1. Extract the files for the exercises
 
-Download the file `exercise_files.tar.gz` from Blackboard. This is a zipped tape archive (tar). To extract its contents use the following command:
+Download the file `exercise_files.tar.gz` from [HERE](exercise_files.tar.gz). This is a zipped tape archive (tar). To extract its contents use the following command:
 
 ```bash
 $ tar -xzvf exercise_files.tar.gz
